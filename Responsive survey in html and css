@@ -1,0 +1,78 @@
+Creating a responsive survey form in HTML and CSS involves structuring the form elements and applying styles that adapt to different screen sizes. Here's a basic example to get you started:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            input[type="text"], select {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Survey Form</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <option value="uk">United Kingdom</option>
+            </select>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+```
+
+This example demonstrates a basic responsive survey form with a name, email, gender, and country fields. The CSS provided ensures that the form and its elements adapt to different screen sizes. Adjust the form and styles according to your specific requirements
